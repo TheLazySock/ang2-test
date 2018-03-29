@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { UserInfoComponent } from '../user-info/user-info.component';
+
 
 @Component({
   selector: 'app-user-card',
@@ -16,7 +19,16 @@ export class UserCardComponent implements OnInit {
   //И тогда получается что @Input необходим для передачи данных в родительский компонент. Думаю как-то так.
   @Input() user: User;
   
-  constructor() { }
+
+  constructor(private router: Router) { }
+
+  showInfo() {
+    this.router.navigate(['info'], {
+      queryParams: {
+        'id': this.user.id
+      }
+    })
+  }
 
   ngOnInit() {
     

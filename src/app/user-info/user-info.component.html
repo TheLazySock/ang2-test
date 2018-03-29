@@ -1,0 +1,31 @@
+<div class="modal-mask" *ngIf="user">
+  <div class="modal-container">
+    <h4 class="modal-name">{{user.name}}</h4>
+    <div class="modal-body">
+      <div class="modal-body-block">
+        <h5>Common info</h5>
+        <p> Username: {{user.username}}</p>
+        <p> E-mail : {{user.email}}</p>
+        <p> Phone : {{user.phone}}</p>
+      </div>
+      <div class="modal-body-block">
+        <h5> Work place</h5>
+        <p> Company : {{user.company.name}}</p>
+        <p> Сatchphrase : {{user.company.catchPhrase}}</p>
+        <p> Sphere of activity : {{user.company.bs}}</p>
+      </div>
+      <div class="modal-body-block">
+        <h5> Home address</h5>
+        <p> Street : {{user.address.street}}</p> 
+        <p> Suite : {{user.address.suite}}</p>
+        <p> City : {{user.address.city}}</p>
+        <p> Zipcode : {{user.address.zipcode}}</p>
+      </div>
+      <p> Site: <a href="#">{{user.website}}</a></p>
+      <!-- <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map> -->
+    </div>
+    <button class="close-modal" type="button" routerLink="">Close</button>
+  </div>
+</div>
