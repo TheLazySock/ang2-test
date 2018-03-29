@@ -1,0 +1,27 @@
+h3:first-child {
+    display: flex;
+    justify-content: center;
+    color: #007d99;
+    font-size: 65px;
+}
+
+.user-list {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 5vh auto 0;
+}
+
+app-user-card {
+    flex-basis: 400px;
+}
+
+@media screen and (max-device-width: 800px) {
+    app-user-card {
+        margin: 0 auto;
+    }
+}
